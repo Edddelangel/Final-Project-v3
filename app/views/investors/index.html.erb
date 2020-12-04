@@ -1,0 +1,118 @@
+<div>
+  <div>
+    <h1>
+      List of all investors
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new investor
+    </h2>
+
+    <form action="/insert_investor" method="post">
+      <div>
+        <label for="first_name_box">
+          First name
+        </label>
+
+        <input type="text" id="first_name_box" name="query_first_name">
+      </div>
+
+      <div>
+        <label for="last_name_box">
+          Last name
+        </label>
+
+        <input type="text" id="last_name_box" name="query_last_name">
+      </div>
+
+      <div>
+        <label for="email_box">
+          Email
+        </label>
+
+        <input type="text" id="email_box" name="query_email">
+      </div>
+
+      <div>
+        <label for="mobile_box">
+          Mobile
+        </label>
+
+        <input type="text" id="mobile_box" name="query_mobile">
+      </div>
+
+      <button>
+        Register yourself as an investor
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table>
+      <tr>
+      
+
+        <th>
+          First name
+        </th>
+
+        <th>
+          Last name
+        </th>
+
+        <th>
+          Email
+        </th>
+
+        <th>
+          Mobile
+        </th>
+
+      
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_investors.each do |an_investor| %>
+      <tr>
+      
+
+        <td>
+          <%= an_investor.first_name %>
+        </td>
+
+        <td>
+          <%= an_investor.last_name %>
+        </td>
+
+        <td>
+          <%= an_investor.email %>
+        </td>
+
+        <td>
+          <%= an_investor.mobile %>
+        </td>
+
+      
+
+        <td>
+          <a href="/investors/<%= an_investor.id %>">
+            <i class="fas fa-info-circle"></i> Show details 
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

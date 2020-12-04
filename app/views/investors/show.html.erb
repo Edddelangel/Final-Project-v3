@@ -1,0 +1,103 @@
+<div>
+  <div>
+    <h1>
+      Investor #<%= @the_investor.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/investors">
+          <i class="fas fa-arrow-left"></i> Go Back
+        </a>
+      </div>
+
+      <div>
+     
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        First name
+      </dt>
+      <dd>
+        <%= @the_investor.first_name %>
+      </dd>
+
+      <dt>
+        Last name
+      </dt>
+      <dd>
+        <%= @the_investor.last_name %>
+      </dd>
+
+      <dt>
+        Email
+      </dt>
+      <dd>
+        <%= @the_investor.email %>
+      </dd>
+
+      <dt>
+        Mobile
+      </dt>
+      <dd>
+        <%= @the_investor.mobile %>
+      </dd>
+
+     
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit investor
+    </h2>
+
+    <form action="/modify_investor/<%= @the_investor.id %>"  method="post" >
+      <div>
+        <label for="first_name_box">
+          First name
+        </label>
+
+        <input type="text" id="first_name_box" name="query_first_name" value="<%= @the_investor.first_name %>">
+      </div>
+
+      <div>
+        <label for="last_name_box">
+          Last name
+        </label>
+
+        <input type="text" id="last_name_box" name="query_last_name" value="<%= @the_investor.last_name %>">
+      </div>
+
+      <div>
+        <label for="email_box">
+          Email
+        </label>
+
+        <input type="text" id="email_box" name="query_email" value="<%= @the_investor.email %>">
+      </div>
+
+      <div>
+        <label for="mobile_box">
+          Mobile
+        </label>
+
+        <input type="text" id="mobile_box" name="query_mobile" value="<%= @the_investor.mobile %>">
+      </div>
+
+      <button>
+        Update investor
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>

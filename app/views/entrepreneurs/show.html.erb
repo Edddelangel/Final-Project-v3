@@ -1,0 +1,102 @@
+<div>
+  <div>
+    <h1>
+      Entrepreneur #<%= @the_entrepreneur.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/entrepreneurs">
+          <i class="fas fa-arrow-left"></i> Go Back
+        </a>
+      </div>
+
+      <div>
+      
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        First name
+      </dt>
+      <dd>
+        <%= @the_entrepreneur.first_name %>
+      </dd>
+
+      <dt>
+        Last name
+      </dt>
+      <dd>
+        <%= @the_entrepreneur.last_name %>
+      </dd>
+
+      <dt>
+        Email
+      </dt>
+      <dd>
+        <%= @the_entrepreneur.email %>
+      </dd>
+
+      <dt>
+        Mobile
+      </dt>
+      <dd>
+        <%= @the_entrepreneur.mobile %>
+      </dd>
+
+     
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit entrepreneur
+    </h2>
+
+    <form action="/modify_entrepreneur/<%= @the_entrepreneur.id %>"  method="post" >
+      <div>
+        <label for="first_name_box">
+          First name
+        </label>
+
+        <input type="text" id="first_name_box" name="query_first_name" value="<%= @the_entrepreneur.first_name %>">
+      </div>
+
+      <div>
+        <label for="last_name_box">
+          Last name
+        </label>
+
+        <input type="text" id="last_name_box" name="query_last_name" value="<%= @the_entrepreneur.last_name %>">
+      </div>
+
+      <div>
+        <label for="email_box">
+          Email
+        </label>
+
+        <input type="text" id="email_box" name="query_email" value="<%= @the_entrepreneur.email %>">
+      </div>
+
+      <div>
+        <label for="mobile_box">
+          Mobile
+        </label>
+
+        <input type="text" id="mobile_box" name="query_mobile" value="<%= @the_entrepreneur.mobile %>">
+      </div>
+
+      <button>
+        Update entrepreneur
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>

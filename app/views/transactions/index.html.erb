@@ -1,0 +1,182 @@
+<div>
+  <div>
+    <h1>
+      List of all transactions
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new transaction
+    </h2>
+
+    <form action="/insert_transaction" method="post">
+      <div>
+        <label for="project_name_box">
+          Project name
+        </label>
+
+        <input type="text" id="project_name_box" name="query_project_name">
+      </div>
+
+      <div>
+        <label for="industry_box">
+          Industry
+        </label>
+
+        <input type="text" id="industry_box" name="query_industry">
+      </div>
+
+      <div>
+        <label for="description_box">
+          Description
+        </label>
+
+        <input type="text" id="description_box" name="query_description">
+      </div>
+
+      <div>
+        <label for="instrument_box">
+          Instrument
+        </label>
+
+        <input type="text" id="instrument_box" name="query_instrument">
+      </div>
+
+      <div>
+        <label for="years_box">
+          Years in the investment
+        </label>
+
+        <input type="text" id="years_box" name="query_years">
+      </div>
+
+      <div>
+        <label for="return_box">
+          Return
+        </label>
+
+        <input type="text" id="return_box" name="query_return">
+      </div>
+
+      <div>
+        <label for="required_funding_box">
+          Required funding (US Dollars)
+        </label>
+
+        <input type="text" id="required_funding_box" name="query_required_funding">
+      </div>
+
+      <div>
+        <label for="entrepreneur_id_box">
+          Entrepreneur
+        </label>
+
+        <input type="text" id="entrepreneur_id_box" name="query_entrepreneur_id">
+      </div>
+
+      <button>
+        Register a transaction
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table>
+      <tr>
+   
+
+        <th>
+          Project name
+        </th>
+
+        <th>
+          Industry
+        </th>
+
+        <th>
+          Description
+        </th>
+
+        <th>
+          Instrument
+        </th>
+
+        <th>
+          Years
+        </th>
+
+        <th>
+          Return
+        </th>
+
+        <th>
+          Required funding
+        </th>
+
+        <th>
+          Entrepreneur
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_transactions.each do |a_transaction| %>
+      <tr>
+      
+
+        <td>
+          <%= a_transaction.project_name %>
+        </td>
+
+        <td>
+          <%= a_transaction.industry %>
+        </td>
+
+        <td>
+          <%= a_transaction.description %>
+        </td>
+
+        <td>
+          <%= a_transaction.instrument %>
+        </td>
+
+        <td>
+          <%= a_transaction.years %>
+        </td>
+
+        <td>
+          <%= a_transaction.return %>
+        </td>
+
+        <td>
+          <%= a_transaction.required_funding %>
+        </td>
+
+        <td>
+         
+          <a href="/entrepreneurs/<%= a_transaction.entrepreneur_id %>">
+            <i <i class="fas fa-address-card"></i>Meet the entrepreneur 
+          </a>
+        </td>
+
+        <td>
+          <a href="/transactions/<%= a_transaction.id %>">
+            <i class="fas fa-info-circle"></i> Show details 
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

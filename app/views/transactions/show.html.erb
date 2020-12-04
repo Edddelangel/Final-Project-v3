@@ -1,0 +1,162 @@
+<div>
+  <div>
+    <h1>
+      Transaction #<%= @the_transaction.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/transactions">
+          <i class="fas fa-arrow-left"></i> Go Back
+        </a>
+      </div>
+
+      <div>
+        
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Project name
+      </dt>
+      <dd>
+        <%= @the_transaction.project_name %>
+      </dd>
+
+      <dt>
+        Industry
+      </dt>
+      <dd>
+        <%= @the_transaction.industry %>
+      </dd>
+
+      <dt>
+        Description
+      </dt>
+      <dd>
+        <%= @the_transaction.description %>
+      </dd>
+
+      <dt>
+        Instrument
+      </dt>
+      <dd>
+        <%= @the_transaction.instrument %>
+      </dd>
+
+      <dt>
+        Years
+      </dt>
+      <dd>
+        <%= @the_transaction.years %>
+      </dd>
+
+      <dt>
+        Return
+      </dt>
+      <dd>
+        <%= @the_transaction.return %>
+      </dd>
+
+      <dt>
+        Required funding (US Dollars)
+      </dt>
+      <dd>
+        <%= @the_transaction.required_funding %>
+      </dd>
+
+      <dt>
+        Entrepreneur
+      </dt>
+      <dd>
+        <%= @the_transaction.entrepreneur_id %>
+      </dd>
+
+      
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit transaction
+    </h2>
+
+    <form action="/modify_transaction/<%= @the_transaction.id %>"  method="post" >
+      <div>
+        <label for="project_name_box">
+          Project name
+        </label>
+
+        <input type="text" id="project_name_box" name="query_project_name" value="<%= @the_transaction.project_name %>">
+      </div>
+
+      <div>
+        <label for="industry_box">
+          Industry
+        </label>
+
+        <input type="text" id="industry_box" name="query_industry" value="<%= @the_transaction.industry %>">
+      </div>
+
+      <div>
+        <label for="description_box">
+          Description
+        </label>
+
+        <input type="text" id="description_box" name="query_description" value="<%= @the_transaction.description %>">
+      </div>
+
+      <div>
+        <label for="instrument_box">
+          Instrument
+        </label>
+
+        <input type="text" id="instrument_box" name="query_instrument" value="<%= @the_transaction.instrument %>">
+      </div>
+
+      <div>
+        <label for="years_box">
+          Years
+        </label>
+
+        <input type="text" id="years_box" name="query_years" value="<%= @the_transaction.years %>">
+      </div>
+
+      <div>
+        <label for="return_box">
+          Return
+        </label>
+
+        <input type="text" id="return_box" name="query_return" value="<%= @the_transaction.return %>">
+      </div>
+
+      <div>
+        <label for="required_funding_box">
+          Required funding
+        </label>
+
+        <input type="text" id="required_funding_box" name="query_required_funding" value="<%= @the_transaction.required_funding %>">
+      </div>
+
+      <div>
+        <label for="entrepreneur_id_box">
+          Entrepreneur
+        </label>
+
+        <input type="text" id="entrepreneur_id_box" name="query_entrepreneur_id" value="<%= @the_transaction.entrepreneur_id %>">
+      </div>
+
+      <button>
+        Update transaction
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>

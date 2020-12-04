@@ -1,0 +1,33 @@
+<h1>Welcome to CryptoFunding</h1>
+
+ <ul>
+    <% if @current_user == nil %>
+    <h2>
+    Try our product and find amazing opportunities to invest or investors to fund your idea! 
+    </h2>
+
+    <h2>
+    Private Equity has never been as easy as this!
+    </h2>
+
+    <% else %>
+    <div class="container">
+      <div class="row mb-medium">
+        <div class="one-third">
+          <a class="button" href="/investors">Find an investor  <i class="fas fa-hand-holding-usd"></i>
+          </a>
+        </div>
+
+        <div class="one-third">
+        </div>
+        
+        <div class="one-third">
+          <a class="button" href="/transactions">  Find a transaction <i class="fab fa-sketch"></i>
+          </a>
+        </div>
+      
+      </div>
+    <div>
+
+    <% end %>
+  </ul>

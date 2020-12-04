@@ -1,0 +1,18 @@
+project_name,industry,description,instrument,years,return,required_funding,entrepreneur_id
+Mars 1 ,Industrials,TBD,Preferred Equity,3,16%,150000,11
+Green 2,Green Power,TBD,Preferred Equity,3,14%,150000,1
+Chicago,Real Estate,TBD,Preferred Equity,2,16%,150000,10
+Tower,Financial Services,TBD,Preferred Equity,7,10%,150000,10
+Crypto,Financial Technology,TBD,Preferred Equity,4,13%,150000,16
+Zeus,Healthcare,TBD,Preferred Equity,1,10%,150000,12
+Nomad,Food,TBD,Preferred Equity,1,16%,150000,6
+Mila,Software,TBD,Preferred Equity,8,12%,150000,16
+Drive,O&G,TBD,Preferred Equity,10,13%,150000,13
+Book ,Retail ,TBD,Preferred Equity,1,11%,150000,1
+Capital QR,Consumer,TBD,Preferred Equity,9,12%,150000,4
+YouCar,TMT,TBD,Preferred Equity,4,10%,150000,13
+App Dev,Renewables,TBD,Preferred Equity,9,16%,150000,5
+Crowfunding,Real Estate,TBD,Preferred Equity,2,15%,150000,4
+Kindly,Financial Services,TBD,Preferred Equity,5,14%,150000,16
+Red,Financial Technology,TBD,Preferred Equity,6,13%,150000,6
+Roma,Healthcare,TBD,Preferred Equity,7,11%,150000,4
