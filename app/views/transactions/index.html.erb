@@ -57,7 +57,7 @@
 
       <div>
         <label for="return_box">
-          Return
+          Return (%)
         </label>
 
         <input type="text" id="return_box" name="query_return">
@@ -73,7 +73,7 @@
 
       <div>
         <label for="entrepreneur_id_box">
-          Entrepreneur
+          Entrepreneur ID (Note: If it is a new entrepreneur, first create the entrepreneur <a href="/entrepreneurs/">here</a>)
         </label>
 
         <input type="text" id="entrepreneur_id_box" name="query_entrepreneur_id">
@@ -164,7 +164,7 @@
         <td>
          
           <a href="/entrepreneurs/<%= a_transaction.entrepreneur_id %>">
-            <i <i class="fas fa-address-card"></i>Meet the entrepreneur 
+            <i <i class="fas fa-address-card"></i>Meet the entrepreneur # <%= a_transaction.entrepreneur_id %>
           </a>
         </td>
 
@@ -180,3 +180,5 @@
 </div>
 
 <hr>
+
+  

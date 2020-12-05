@@ -60,6 +60,9 @@
     <table>
       <tr>
      
+        <th>
+          ID
+        </th>
 
         <th>
           First name
@@ -86,6 +89,9 @@
       <% @list_of_entrepreneurs.each do |an_entrepreneur| %>
       <tr>
       
+        <td>
+          <%= an_entrepreneur.id %>
+        </td>
 
         <td>
           <%= an_entrepreneur.first_name %>
